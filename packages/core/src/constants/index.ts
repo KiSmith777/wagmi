@@ -1,7 +1,7 @@
 export { erc20ABI, erc721ABI } from './abis'
 
-export { etherscanBlockExplorers } from './blockExplorers'
-export type { BlockExplorer, BlockExplorerName } from './blockExplorers'
+export { etherscanBlockExplorers, bscscanBlockExplorers } from './blockExplorers'
+export type {  BlockExplorerName, BlockExplorer,} from './blockExplorers'
 
 export {
   chain,

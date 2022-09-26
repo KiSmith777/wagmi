@@ -1,5 +1,5 @@
 import { Chain } from '../types'
-import { etherscanBlockExplorers } from './blockExplorers'
+import { etherscanBlockExplorers, bscscanBlockExplorers } from './blockExplorers'
 import { alchemyRpcUrls, infuraRpcUrls, publicRpcUrls } from './rpcs'
 
 export const chainId = {
@@ -8,6 +8,8 @@ export const chainId = {
   rinkeby: 4,
   goerli: 5,
   kovan: 42,
+  binance: 56,
+  binanceTestnet: 97,
   sepolia: 11_155_111,
   optimism: 10,
   optimismKovan: 69,
@@ -142,6 +144,43 @@ export const kovan: Chain = {
     blockCreated: 30285908,
   },
   testnet: true,
+}
+
+export const binance: Chain = {
+  id: chainId.binance,
+  name: "BNB Smart Chain",
+  network: "binance",
+  nativeCurrency: { name: 'Build and Build', symbol: 'BNB', decimals: 18 },
+  rpcUrls: {
+    default: 'https://bsc-dataseed1.binance.org/',
+  },
+  blockExplorers: {
+    bscscan: bscscanBlockExplorers.binance,
+    default: bscscanBlockExplorers.binance,
+  },
+  multicall: {
+    address: '0xca11bde05977b3631167028862be2a173976ca11',
+    blockCreated: 15921452,
+  },
+}
+
+export const binanceTestnet: Chain = {
+  id: chainId.binanceTestnet,
+  name: "BNB Testnet",
+  network: "binanceTestNet",
+  nativeCurrency: { name: 'Build and Build', symbol: 'BNB', decimals: 18 },
+  rpcUrls: {
+    default: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+  },
+  blockExplorers: {
+    bscscan: bscscanBlockExplorers.binanceTestnet,
+    default: bscscanBlockExplorers.binanceTestnet,
+  },
+  multicall: {
+    address: '0xca11bde05977b3631167028862be2a173976ca11',
+    blockCreated: 17422483,
+  },
+  testnet: true
 }
 
 export const sepolia: Chain = {

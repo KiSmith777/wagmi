@@ -78,6 +78,8 @@ type PublicChains = Extract<
   | 'rinkeby'
   | 'goerli'
   | 'kovan'
+  | 'binance'
+  | 'binanceTestnet'
   | 'sepolia'
   | 'optimism'
   | 'optimismKovan'
@@ -94,6 +96,8 @@ export const publicRpcUrls: Record<PublicChains, string> = {
   rinkeby: `${alchemyRpcUrls.rinkeby}/${defaultAlchemyApiKey}`,
   goerli: `${alchemyRpcUrls.goerli}/${defaultAlchemyApiKey}`,
   kovan: `${alchemyRpcUrls.kovan}/${defaultAlchemyApiKey}`,
+  binance: 'https://bsc-dataseed.binance.org',
+  binanceTestnet: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
   sepolia: 'https://rpc.sepolia.org',
   optimism: 'https://mainnet.optimism.io',
   optimismKovan: 'https://kovan.optimism.io',

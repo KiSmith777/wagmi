@@ -6,6 +6,7 @@ export {
   goerli,
   hardhat,
   kovan,
+  binance,
   sepolia,
   localhost,
   mainnet,

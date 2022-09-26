@@ -1,7 +1,9 @@
 import { ChainName } from './chains'
 
-export type BlockExplorerName = 'etherscan'
+export type BlockExplorerName = 'etherscan' | 'bscscan'
+
 export type BlockExplorer = { name: string; url: string }
+
 
 type EtherscanChains = Extract<
   ChainName,
@@ -18,6 +20,25 @@ type EtherscanChains = Extract<
   | 'arbitrum'
   | 'arbitrumRinkeby'
 >
+
+type BnbChains = Extract<
+  ChainName,
+  | 'binance'
+  | 'binanceTestnet'
+>
+
+export const bscscanBlockExplorers: Record<BnbChains, BlockExplorer> = {
+  binance: {
+    name: 'BscScan',
+    url: 'https://bscscan.com',
+  },
+  binanceTestnet: {
+    name: 'BscScan',
+    url: 'https://testnet.bscscan.com',
+
+  }
+} as const
+
 export const etherscanBlockExplorers: Record<EtherscanChains, BlockExplorer> = {
   mainnet: {
     name: 'Etherscan',

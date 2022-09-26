@@ -152,7 +152,8 @@ export const binance: Chain = {
   network: "binance",
   nativeCurrency: { name: 'Build and Build', symbol: 'BNB', decimals: 18 },
   rpcUrls: {
-    default: 'https://bsc-dataseed1.binance.org/',
+    public: publicRpcUrls.binance,
+    default: publicRpcUrls.binance,
   },
   blockExplorers: {
     bscscan: bscscanBlockExplorers.binance,
@@ -170,7 +171,8 @@ export const binanceTestnet: Chain = {
   network: "binanceTestNet",
   nativeCurrency: { name: 'Build and Build', symbol: 'BNB', decimals: 18 },
   rpcUrls: {
-    default: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+    public: publicRpcUrls.binanceTestnet,
+    default: publicRpcUrls.binanceTestnet,
   },
   blockExplorers: {
     bscscan: bscscanBlockExplorers.binanceTestnet,

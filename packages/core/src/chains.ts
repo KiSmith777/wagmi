@@ -7,6 +7,7 @@ export {
   hardhat,
   kovan,
   binance,
+  binanceTestnet,
   sepolia,
   localhost,
   mainnet,
